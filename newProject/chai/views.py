@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import variety
 
 # Create your views here.
 def chaiHome(request):
-    return render(request, 'chail.html', name='chai home')
-
-def order(request):
-    return HttpResponse("order confirm")
+    chais = variety.objects.all()
+    return render(request, 'chail.html',{"chai": chais})

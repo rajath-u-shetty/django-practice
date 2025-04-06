@@ -20,5 +20,4 @@ from . import views
 
 urlpatterns = [
     path('', views.chaiHome),# localhost:8000/chai
-    path("order/", views.order, name='order chai')
 ]
